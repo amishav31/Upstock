@@ -18,21 +18,42 @@
     }
     h1 {
       font-size: 2.5rem;
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
       color: #38bdf8;
     }
-    .stock-card {
+    .index-cards {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+      justify-content: center;
+    }
+    .index-card, .stock-card {
       background: #1e293b;
       border-radius: 20px;
-      padding: 1.5rem;
-      width: 90%;
-      max-width: 800px;
+      padding: 1.2rem 1.5rem;
       box-shadow: 0 0 20px #0284c7;
-      margin-bottom: 1.5rem;
       transition: 0.3s;
     }
-    .stock-card:hover {
+    .index-card:hover, .stock-card:hover {
       transform: scale(1.02);
+    }
+    .index-card {
+      width: 200px;
+      text-align: center;
+    }
+    .index-name {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .index-value {
+      font-size: 1.3rem;
+      color: #fcd34d;
+    }
+    .stock-card {
+      width: 90%;
+      max-width: 800px;
+      margin-bottom: 1.5rem;
     }
     .stock-name {
       font-size: 1.8rem;
@@ -42,6 +63,8 @@
       display: flex;
       justify-content: space-between;
       font-size: 1.2rem;
+      flex-wrap: wrap;
+      gap: 10px;
     }
     .label {
       color: #94a3b8;
@@ -51,6 +74,19 @@
 <body>
   <h1>Indian Stock Dashboard</h1>
 
+  <!-- Index Cards -->
+  <div class="index-cards">
+    <div class="index-card">
+      <div class="index-name">NIFTY 50</div>
+      <div class="index-value">22,450.65</div>
+    </div>
+    <div class="index-card">
+      <div class="index-name">SENSEX</div>
+      <div class="index-value">74,321.12</div>
+    </div>
+  </div>
+
+  <!-- Stock Cards -->
   <div class="stock-card">
     <div class="stock-name">RELIANCE</div>
     <div class="stock-info">
@@ -79,7 +115,7 @@
   </div>
 
   <script>
-    // Future: Replace mock data with live Upstox API data here
+    // Later: Replace mock data with live Upstox data
   </script>
 </body>
 </html>
