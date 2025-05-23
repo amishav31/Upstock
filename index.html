@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Stock Market Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #0f172a, #1e293b);
+      color: #f8fafc;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #38bdf8;
+    }
+    .stock-card {
+      background: #1e293b;
+      border-radius: 20px;
+      padding: 1.5rem;
+      width: 90%;
+      max-width: 800px;
+      box-shadow: 0 0 20px #0284c7;
+      margin-bottom: 1.5rem;
+      transition: 0.3s;
+    }
+    .stock-card:hover {
+      transform: scale(1.02);
+    }
+    .stock-name {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+    .stock-info {
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.2rem;
+    }
+    .label {
+      color: #94a3b8;
+    }
+  </style>
+</head>
+<body>
+  <h1>Indian Stock Dashboard</h1>
+
+  <div class="stock-card">
+    <div class="stock-name">RELIANCE</div>
+    <div class="stock-info">
+      <div><span class="label">Price:</span> ₹2,735.50</div>
+      <div><span class="label">Change:</span> +0.85%</div>
+      <div><span class="label">Volume:</span> 3.2M</div>
+    </div>
+  </div>
+
+  <div class="stock-card">
+    <div class="stock-name">TATA MOTORS</div>
+    <div class="stock-info">
+      <div><span class="label">Price:</span> ₹882.20</div>
+      <div><span class="label">Change:</span> -1.12%</div>
+      <div><span class="label">Volume:</span> 5.8M</div>
+    </div>
+  </div>
+
+  <div class="stock-card">
+    <div class="stock-name">INFY</div>
+    <div class="stock-info">
+      <div><span class="label">Price:</span> ₹1,442.70</div>
+      <div><span class="label">Change:</span> +0.23%</div>
+      <div><span class="label">Volume:</span> 2.4M</div>
+    </div>
+  </div>
+
+  <script>
+    // Future: Replace mock data with live Upstox API data here
+  </script>
+</body>
+</html>
