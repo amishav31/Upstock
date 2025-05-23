@@ -183,6 +183,38 @@
       </div>
     </div>
   </div>
+<script>
+  const apiKey = 'WH9YZCAXQW1U62A1';
+  const symbols = ['RELIANCE.BSE', 'TCS.BSE', 'SBIN.BSE'];
 
+  async function fetchStock(symbol) {
+    const url = `https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${symbol}&apikey=${apiKey}`;
+    const res = await fetch(url);
+    const data = await res.json();
+    return data['Global Quote'];
+  }
+
+  async function loadStocks() {
+    for (let symbol of symbols) {
+      const stock = await fetchStock(symbol);
+      const name = symbol.split('.')[0];
+      const price = stock['05. price'];
+      const change = stock['10. change percent'];
+
+      const stockHTML = `
+        <div class="stock-card">
+          <div class="stock-name">${name}</div>
+          <div class="stock-info">
+            <div><span class="label">Price:</span> ₹${parseFloat(price).toFixed(2)}</div>
+            <div><span class="label">Change:</span> ${change}</div>
+          </div>
+        </div>
+      `;
+      document.querySelector('.column').innerHTML += stockHTML;
+    }
+  }
+
+  window.onload = loadStocks;
+</script>
 </body>
 </html>
