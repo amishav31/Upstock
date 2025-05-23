@@ -50,25 +50,48 @@
       font-size: 1.3rem;
       color: #fcd34d;
     }
-    .stock-card {
-      width: 90%;
-      max-width: 800px;
-      margin-bottom: 1.5rem;
+
+    .section-title {
+      font-size: 1.5rem;
+      margin: 1.5rem 0 1rem;
+      color: #a5f3fc;
     }
+
+    .stock-columns {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      width: 100%;
+      max-width: 1000px;
+    }
+
+    .column {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .stock-card {
+      margin-bottom: 1.2rem;
+    }
+
     .stock-name {
-      font-size: 1.8rem;
-      margin-bottom: 0.5rem;
+      font-size: 1.4rem;
+      margin-bottom: 0.3rem;
     }
     .stock-info {
       display: flex;
       justify-content: space-between;
-      font-size: 1.2rem;
+      font-size: 1rem;
       flex-wrap: wrap;
       gap: 10px;
     }
     .label {
       color: #94a3b8;
     }
+
+    .gain { color: #22c55e; }
+    .loss { color: #ef4444; }
   </style>
 </head>
 <body>
@@ -86,36 +109,72 @@
     </div>
   </div>
 
-  <!-- Stock Cards -->
-  <div class="stock-card">
-    <div class="stock-name">RELIANCE</div>
-    <div class="stock-info">
-      <div><span class="label">Price:</span> ₹2,735.50</div>
-      <div><span class="label">Change:</span> +0.85%</div>
-      <div><span class="label">Volume:</span> 3.2M</div>
+  <!-- Stock Columns -->
+  <div class="stock-columns">
+    <!-- Gainers -->
+    <div class="column">
+      <div class="section-title">Top 3 Gainers</div>
+
+      <div class="stock-card">
+        <div class="stock-name">ADANI ENT</div>
+        <div class="stock-info">
+          <div><span class="label">Price:</span> ₹3,210</div>
+          <div><span class="label">Change:</span> <span class="gain">+3.75%</span></div>
+          <div><span class="label">Volume:</span> 4.1M</div>
+        </div>
+      </div>
+
+      <div class="stock-card">
+        <div class="stock-name">ONGC</div>
+        <div class="stock-info">
+          <div><span class="label">Price:</span> ₹268.70</div>
+          <div><span class="label">Change:</span> <span class="gain">+2.95%</span></div>
+          <div><span class="label">Volume:</span> 7.3M</div>
+        </div>
+      </div>
+
+      <div class="stock-card">
+        <div class="stock-name">HINDALCO</div>
+        <div class="stock-info">
+          <div><span class="label">Price:</span> ₹565.30</div>
+          <div><span class="label">Change:</span> <span class="gain">+2.10%</span></div>
+          <div><span class="label">Volume:</span> 2.6M</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Losers -->
+    <div class="column">
+      <div class="section-title">Top 3 Losers</div>
+
+      <div class="stock-card">
+        <div class="stock-name">TECHM</div>
+        <div class="stock-info">
+          <div><span class="label">Price:</span> ₹1,248.00</div>
+          <div><span class="label">Change:</span> <span class="loss">-2.55%</span></div>
+          <div><span class="label">Volume:</span> 1.9M</div>
+        </div>
+      </div>
+
+      <div class="stock-card">
+        <div class="stock-name">HCLTECH</div>
+        <div class="stock-info">
+          <div><span class="label">Price:</span> ₹1,392.20</div>
+          <div><span class="label">Change:</span> <span class="loss">-1.88%</span></div>
+          <div><span class="label">Volume:</span> 2.1M</div>
+        </div>
+      </div>
+
+      <div class="stock-card">
+        <div class="stock-name">BAJAJ-AUTO</div>
+        <div class="stock-info">
+          <div><span class="label">Price:</span> ₹6,142.80</div>
+          <div><span class="label">Change:</span> <span class="loss">-1.34%</span></div>
+          <div><span class="label">Volume:</span> 1.3M</div>
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="stock-card">
-    <div class="stock-name">TATA MOTORS</div>
-    <div class="stock-info">
-      <div><span class="label">Price:</span> ₹882.20</div>
-      <div><span class="label">Change:</span> -1.12%</div>
-      <div><span class="label">Volume:</span> 5.8M</div>
-    </div>
-  </div>
-
-  <div class="stock-card">
-    <div class="stock-name">INFY</div>
-    <div class="stock-info">
-      <div><span class="label">Price:</span> ₹1,442.70</div>
-      <div><span class="label">Change:</span> +0.23%</div>
-      <div><span class="label">Volume:</span> 2.4M</div>
-    </div>
-  </div>
-
-  <script>
-    // Later: Replace mock data with live Upstox data
-  </script>
 </body>
 </html>
